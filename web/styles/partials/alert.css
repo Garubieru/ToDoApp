@@ -1,0 +1,58 @@
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgb(0, 0, 0, 0.43);
+}
+
+.overlay .alert {
+  width: 60%;
+  margin: 0 auto;
+
+  background: #0e0e0e;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  border-radius: 0.8rem;
+
+  animation-name: alert-animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.overlay .alert h1 {
+  color: var(--color-primary);
+}
+
+.no-tasks {
+  text-align: center;
+  color: var(--color-secondary);
+  opacity: 0.5;
+}
+
+.no-tasks .smile {
+  margin-bottom: 1.2rem;
+}
+
+.no-tasks p {
+  font-weight: bold;
+}
+
+@keyframes alert-animation {
+  from {
+    margin-top: 0;
+  }
+
+  to {
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .overlay .alert {
+    max-width: 20%;
+  }
+}
